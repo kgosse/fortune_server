@@ -50,6 +50,7 @@ module.exports = function(Fortune) {
         {
           http: {path: '/like', verb: 'put'},
           accepts: {arg: 'id', type: 'any', http: { source: 'query' } },
+          description: "Add a like to the fortune which id is passed",
           returns: {arg: 'like', type: 'string'}
         }
     );
@@ -60,6 +61,7 @@ module.exports = function(Fortune) {
         {
           http: {path: '/dislike', verb: 'put'},
           accepts: {arg: 'id', type: 'any', http: { source: 'query' } },
+          description: "Add a dislike to the fortune which id is passed",
           returns: {arg: 'dislike', type: 'string'}
         }
     );
@@ -71,6 +73,7 @@ module.exports = function(Fortune) {
           http: {path: '/message', verb: 'put'},
           accepts: [{arg: 'id', type: 'any', http: { source: 'query' } },
                     {arg: 'msg', type: 'string', http: { source: 'query' } }],
+          description: "update the message of the fortune which id is passed by the message passed",
           returns: {arg: 'dislike', type: 'string'}
         }
     );
