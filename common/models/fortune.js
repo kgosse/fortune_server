@@ -24,9 +24,9 @@ module.exports = function(Fortune) {
   //A static method you define    
   Fortune.setDislike = function(fortuneId, cb) {
     Fortune.findById( fortuneId, function (err, instance) {
-        let ndislike =  instance.dislike + 1;
+        let ndislike =  (instance.dislike || 0) + 1;
         instance.updateAttribute("dislike", ndislike , function (err, instance) {
-          var response = "this fortune dislike was well processed new value is: " + instance.dislike;
+          var response = instance.dislike;
           cb(null, response);
           console.log(response);
         });
