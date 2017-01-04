@@ -1,23 +1,42 @@
 {
   "ids": {
     "User": 1,
-    "AccessToken": 1,
+    "AccessToken": 2,
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
+<<<<<<< HEAD
     "Fortune": 3,
     "Owner": 1
+=======
+    "Fortune": 8,
+    "Owner": 2
+>>>>>>> Fix like
   },
   "models": {
     "User": {},
-    "AccessToken": {},
+    "AccessToken": {
+      "6w6FSyevPONcncP74rjN8A7y9dpsh2Jx9nBLcaXTpWJVnR7e0chpafEQC1UQV25Q": "{\"id\":\"6w6FSyevPONcncP74rjN8A7y9dpsh2Jx9nBLcaXTpWJVnR7e0chpafEQC1UQV25Q\",\"ttl\":1209600,\"created\":\"2017-01-04T21:52:05.342Z\",\"userId\":1}"
+    },
     "ACL": {},
     "RoleMapping": {},
     "Role": {},
     "Fortune": {
+<<<<<<< HEAD
       "1": "{\"message\":\"Aujourd'hui, je me prépare sereinement pour la rentrée scolaire qui a lieu demain, quand je reçois un message du collège m'affirmant que non, ils ne donnaient pas le lundi, la rentrée était ce matin. Je suis prof. VDM\",\"time\":\"2017-01-04T05:37:50.732Z\",\"id\":1,\"dislike\":2}",
       "2": "{\"message\":\"a fortune\",\"like\":0,\"dislike\":0,\"time\":\"2017-01-04T22:25:50.656Z\",\"id\":2}"
+=======
+      "1": "{\"message\":\"Aujourd'hui, je me prépare sereinement pour la rentrée scolaire qui a lieu demain, quand je reçois un message du collège m'affirmant que non, ils ne donnaient pas le lundi, la rentrée était ce matin. Je suis prof. VDM\",\"time\":\"2017-01-04T05:37:50.732Z\",\"id\":1,\"dislike\":4,\"like\":6}",
+      "2": "{\"message\":\"Aujourd'hui, je fais des crêpes. Les œufs sont dans leur boite avec des choses marron qui ressemblent bizarrement à des crottes. Dégoutée, je prends les oeufs dont j'ai besoin et jette les deux trucs. Plus tard, ma mère me demande si j'ai vu les deux truffes noires qui étaient dans le frigo. VDM\",\"time\":\"2017-01-04T05:53:03.880Z\",\"id\":2,\"like\":6,\"dislike\":4}",
+      "3": "{\"message\":\"Aujourd'hui, c'est officiel, l'année 2016 a été pour moi la plus catastrophique au niveau sexuel, avec un total de zéro rapports. Rien d'exceptionnel, excepté le fait que je sois mariée depuis 6 ans. VDM\",\"time\":\"2017-01-04T05:53:54.516Z\",\"id\":3,\"like\":4,\"dislike\":4}",
+      "4": "{\"message\":\"Aujourd'hui, mon copain a décrété que c'était le plus beau jour de sa vie. On s'est mariés l'an dernier, j'ai accouché il y a trois mois, mais ce matin, il a attrapé un Pikachu de Noël. VDM\",\"time\":\"2017-01-04T07:10:59.362Z\",\"id\":4,\"dislike\":4,\"like\":5}",
+      "5": "{\"message\":\"Aujourd'hui, comme depuis quelques mois, je suis en conduite accompagnée. Mon père s'est fait retirer son permis parce qu'il m'a fait conduire à sa place : la police nous a arrêté alors qu'il dormait, complètement ivre, sur le siège passager. VDM\",\"time\":\"2017-01-04T19:56:31.774Z\",\"id\":5}",
+      "6": "{\"message\":\"Aujourd'hui, interne à l'hôpital, je dois faire trois points de suture à une dame assez âgée. Quand je suis arrivé, je n'ai rien trouvé de mieux à dire pour la rassurer que : \\\"Ne vous inquiétez pas, j'ai l'habitude des vieilles peaux.\\\" VDM\",\"time\":\"2017-01-04T20:18:57.571Z\",\"id\":6,\"like\":2}",
+      "7": "{\"message\":\"string\",\"like\":0,\"dislike\":0,\"time\":\"2017-01-04T21:53:08.669Z\",\"ownerId\":1,\"id\":7}"
+>>>>>>> Fix like
     },
-    "Owner": {}
+    "Owner": {
+      "1": "{\"username\":\"kg\",\"password\":\"$2a$10$uZBozpvZXxUWB/u/PbnTveidXoNBgAVXPG6rF6v/o2Gah.KCYKz.O\",\"email\":\"test@test.fr\",\"id\":1}"
+    }
   }
 }
