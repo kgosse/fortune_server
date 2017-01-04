@@ -14,7 +14,7 @@ module.exports = function(Fortune) {
   //A static method you define    
   Fortune.setLike = function(fortuneId, cb) {
     Fortune.findById( fortuneId, function (err, instance) {
-        let nlike =  (instance.like || 0) + 1;
+        let nlike = instance.like + 1;
         instance.updateAttribute("like", nlike , function (err, instance) {
           var response = instance.like;
           cb(null, response);
@@ -26,7 +26,7 @@ module.exports = function(Fortune) {
   //A static method you define    
   Fortune.setDislike = function(fortuneId, cb) {
     Fortune.findById( fortuneId, function (err, instance) {
-        let ndislike += 1;
+        let ndislike = instance.dislike + 1;
         instance.updateAttribute("dislike", ndislike , function (err, instance) {
           var response = instance.dislike;
           cb(null, response);
