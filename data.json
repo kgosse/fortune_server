@@ -5,7 +5,7 @@
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "Fortune": 2,
+    "Fortune": 3,
     "Owner": 1
   },
   "models": {
@@ -15,7 +15,8 @@
     "RoleMapping": {},
     "Role": {},
     "Fortune": {
-      "1": "{\"message\":\"Aujourd'hui, je me prépare sereinement pour la rentrée scolaire qui a lieu demain, quand je reçois un message du collège m'affirmant que non, ils ne donnaient pas le lundi, la rentrée était ce matin. Je suis prof. VDM\",\"time\":\"2017-01-04T05:37:50.732Z\",\"id\":1,\"dislike\":2}"
+      "1": "{\"message\":\"Aujourd'hui, je me prépare sereinement pour la rentrée scolaire qui a lieu demain, quand je reçois un message du collège m'affirmant que non, ils ne donnaient pas le lundi, la rentrée était ce matin. Je suis prof. VDM\",\"time\":\"2017-01-04T05:37:50.732Z\",\"id\":1,\"dislike\":2}",
+      "2": "{\"message\":\"a fortune\",\"like\":0,\"dislike\":0,\"time\":\"2017-01-04T22:25:50.656Z\",\"id\":2}"
     },
     "Owner": {}
   }

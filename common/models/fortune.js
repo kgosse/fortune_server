@@ -4,6 +4,8 @@ module.exports = function(Fortune) {
   /*Call before a new instance of review is created*/
     Fortune.beforeRemote('create', function(context, user, next) {
     context.args.data.time = Date.now();
+    context.args.data.like = 0;
+    context.args.data.dislike = 0;
     if(context.req.accessToken !== null)
       context.args.data.ownerId = context.req.accessToken.userId;
     next();
@@ -14,7 +16,7 @@ module.exports = function(Fortune) {
     Fortune.findById( fortuneId, function (err, instance) {
         let nlike =  instance.like + 1;
         instance.updateAttribute("like", nlike , function (err, instance) {
-          var response = "this fortune like was well processed new value is: " + instance.like;
+          var response = instance.like;
           cb(null, response);
           console.log(response);
         });
@@ -24,7 +26,7 @@ module.exports = function(Fortune) {
   //A static method you define    
   Fortune.setDislike = function(fortuneId, cb) {
     Fortune.findById( fortuneId, function (err, instance) {
-        let ndislike =  (instance.dislike || 0) + 1;
+        let ndislike = 1;
         instance.updateAttribute("dislike", ndislike , function (err, instance) {
           var response = instance.dislike;
           cb(null, response);
