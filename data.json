@@ -6,7 +6,7 @@
     "RoleMapping": 1,
     "Role": 1,
     "Fortune": 8,
-    "Owner": 2
+    "Owner": 3
   },
   "models": {
     "User": {},
@@ -26,7 +26,8 @@
       "7": "{\"message\":\"string\",\"like\":0,\"dislike\":0,\"time\":\"2017-01-04T21:53:08.669Z\",\"ownerId\":1,\"id\":7}"
     },
     "Owner": {
-      "1": "{\"username\":\"kg\",\"password\":\"$2a$10$uZBozpvZXxUWB/u/PbnTveidXoNBgAVXPG6rF6v/o2Gah.KCYKz.O\",\"email\":\"test@test.fr\",\"id\":1}"
+      "1": "{\"username\":\"kg\",\"password\":\"$2a$10$uZBozpvZXxUWB/u/PbnTveidXoNBgAVXPG6rF6v/o2Gah.KCYKz.O\",\"email\":\"test@test.fr\",\"id\":1}",
+      "2": "{\"username\":\"vh\",\"password\":\"$2a$10$Qy./zYqqWO1XGxPSXrZLY.QVY.20IqQk26U4dMIO7poZmht9WrJ8u\",\"id\":2}"
     }
   }
 }
