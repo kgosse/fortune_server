@@ -69,6 +69,20 @@
       "principalId": "$everyone",
       "permission": "ALLOW",
       "property": "setDislike"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "setUnlike"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "setUndislike"
     }
   ],
   "methods": {}
