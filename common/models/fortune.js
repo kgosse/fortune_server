@@ -1,4 +1,5 @@
 'use strict';
+const _ = require("lodash");
 
 module.exports = function(Fortune) {
   /*Call before a new instance of review is created*/
@@ -11,14 +12,14 @@ module.exports = function(Fortune) {
     next();
   });
   
-  /*operationnal hook call before retrieve data*/
+  /*operationnal hook call before retrieve data
   Fortune.observe('loaded', function(ctx, next){
     if(ctx.instance){
       let total =  (ctx.instance.like || 0) - (ctx.instance.dislike || 0);
       ctx.instance.total = total;
     }
     next();
-  });
+  });*/
   
   //A static method you define    
   Fortune.setLike = function(fortuneId, cb) {
@@ -72,7 +73,7 @@ module.exports = function(Fortune) {
   Fortune.setMessage = function(fortuneId, msg, cb) {
     Fortune.findById( fortuneId, function (err, instance) {
         instance.updateAttribute("message", msg, function (err, instance) {
-          var response = "the message of this fortune have benn well changed. The new message is : " + instance.message;
+          var response = instance.message;
           cb(null, response);
           console.log(response);
         });
@@ -80,14 +81,23 @@ module.exports = function(Fortune) {
   }
   
   //A static method you define    
-  Fortune.getthirty = function(cb) {
-    Fortune.find(function (err, instances) {
-        
-        instance.updateAttribute("message", msg, function (err, instance) {
-          var response = "the message of this fortune have benn well changed. The new message is : " + instance.message;
-          cb(null, response);
+  Fortune.getThirty = function(cb) {
+    Fortune.find(function (err,instances) {
+        let response = _.chain(instances)
+         .map(function(i){
+          i.total = (i.like || 0) - (i.dislike || 0);
+          return i;
+          })
+         .sortBy(["total","time","like"]).reverse().value();
+      
+      if(response.length <= 30){
+        cb(null, response);
           console.log(response);
-        });
+      }
+      else{
+        cb(null, _.slice(response, 0, 30));
+          console.log(_.slice(response, 0, 30));     
+      }     
     });
   }
   
@@ -96,7 +106,7 @@ module.exports = function(Fortune) {
         'setLike',
         {
           http: {path: '/like', verb: 'put'},
-          accepts: {arg: 'id', type: 'any', http: { source: 'query' } },
+          accepts: {arg: 'id', type: 'any' , http: { source: 'query' } },
           description: "Add a like to the fortune which id is passed",
           returns: {arg: 'like', type: 'string'}
         }
@@ -146,5 +156,15 @@ module.exports = function(Fortune) {
           returns: {arg: 'dislike', type: 'string'}
         }
     );
+    
+    //remoteMethod for process a message
+    Fortune.remoteMethod (
+          'getThirty',
+          {
+            http: {path: '/getthirty', verb: 'get'},
+            description: "get the top thirty fortunes",
+            returns: {arg: 'fortunes', type: 'array'}
+          }
+      );
   
 };

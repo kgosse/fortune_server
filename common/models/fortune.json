@@ -83,6 +83,13 @@
       "principalId": "$everyone",
       "permission": "ALLOW",
       "property": "setUndislike"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "getThirty"
     }
   ],
   "methods": {}
