@@ -157,7 +157,7 @@ module.exports = function(Fortune) {
         }
     );
     
-    //remoteMethod for process a message
+    //remoteMethod for process a the top thirty
     Fortune.remoteMethod (
           'getThirty',
           {
@@ -166,5 +166,4 @@ module.exports = function(Fortune) {
             returns: {arg: 'fortunes', type: 'array'}
           }
       );
-  
 };
