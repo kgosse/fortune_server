@@ -7,7 +7,7 @@ module.exports = function(Owner) {
   //A static method you define    
   Owner.getThirty = function(ownerId, cb){   
     Owner.findById( ownerId, function (err, instance) {
-      instance.fortunes(function(err, instances){
+      instance.fortunes({include: 'owner'}, function(err, instances){
       let response = _.chain(instances)
           .map(function(i){
            i.total = (i.like || 0) - (i.dislike || 0);

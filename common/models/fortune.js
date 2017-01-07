@@ -82,7 +82,7 @@ module.exports = function(Fortune) {
   
   //A static method you define    
   Fortune.getThirty = function(cb) {
-    Fortune.find(function (err,instances) {
+    Fortune.find({include: 'owner'}, function (err,instances) {
         let response = _.chain(instances)
          .map(function(i){
           i.total = (i.like || 0) - (i.dislike || 0);
