@@ -14,30 +14,30 @@
     ]
   },
   "User": {
-    "dataSource": "proddb"
+    "dataSource": "db"
   },
   "AccessToken": {
-    "dataSource": "proddb",
+    "dataSource": "db",
     "public": false
   },
   "ACL": {
-    "dataSource": "proddb",
+    "dataSource": "db",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "proddb",
+    "dataSource": "db",
     "public": false
   },
   "Role": {
-    "dataSource": "proddb",
+    "dataSource": "db",
     "public": false
   },
   "Fortune": {
-    "dataSource": "proddb",
+    "dataSource": "db",
     "public": true
   },
   "Owner": {
-    "dataSource": "proddb",
+    "dataSource": "db",
     "public": true
   }
 }
