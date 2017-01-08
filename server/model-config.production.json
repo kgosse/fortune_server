@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "proddb"
+  },
+  "AccessToken": {
+    "dataSource": "proddb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "proddb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "proddb",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "proddb",
+    "public": false
+  },
+  "Fortune": {
+    "dataSource": "proddb",
+    "public": true
+  },
+  "Owner": {
+    "dataSource": "proddb",
+    "public": true
+  }
+}

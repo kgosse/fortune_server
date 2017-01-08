@@ -1,0 +1,6 @@
+{
+  "proddb": {
+    "name": "proddb",
+    "connector": "postgresql"
+  }
+}
