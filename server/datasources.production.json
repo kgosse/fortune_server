@@ -1,5 +1,10 @@
 {
   "proddb": {
+    "host": "ec2-23-21-238-246.compute-1.amazonaws.com",
+    "port": "5432",
+    "database": "d7mrd2pek63npn",
+    "username": "bloczgoozbrior",
+    "password": "1ffcc534540b158729a656766b105993199dee5166b7dbb190d26762e40414eb",
     "name": "proddb",
     "connector": "postgresql"
   }
